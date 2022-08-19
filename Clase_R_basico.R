@@ -1,8 +1,3 @@
-:)
-:)
-:)
-
-
 pkg <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg)) 
@@ -33,6 +28,8 @@ archivo <- WideReleasesCount
 #VECTORES----------------------------------------
 a <- c(2,4,1,8)
 b <- c(2,2,2,2)
+c= c("perro","casa", 3)
+d=c(2,45,6,7)
 
 #Puedo poseer diferentes tipos de vectores
 vector_double <-c(1, 2.5, 4.5, 25)
@@ -44,12 +41,19 @@ vector_character <-c("Hola", "Mundo!", "4343434", "ssfkjdfdkjflkshfklj")
 
 #Length nos ayuda a conocer la longitud de cualquier vector. 
 length(vector_logical)
+f=c("mi mundo es bonito")
+length(f)
 length(vector_double)
 length(archivo)
 
 #Operaciones Vectorizadas-------------------------------------------------------------
-c<-a+b
-c<-a/b
+u=a+b
+print(u)
+u
+View(u) 
+l=c(1,2,3)
+P=c(1,2)
+l+f
 #reciclaje de elementos en los vectores. 
 
 '''supongamos que tenemos dos vectores a y b'''
@@ -57,6 +61,8 @@ a<-c(1,2)
 b<-c(1,2,3,4)
 '''pero deseamos crear una operaicón con estos dos vectores sumandolos'''
 d<-a+b
+d
+print(d)
 '''veremos que el resultado de ellos es la suma de las dos primeras partes del vector
 y R recicla la otra parte del vector para no perder datos'''
 
@@ -72,8 +78,9 @@ ncol = es el número de columnas.
 byrow = es un valor lógico. Si es TRUE el vector que pasamos será ordenado por filas.
 dimnames = nombres asignado a filas y columnas.'''
 #Seguidamente se muestra un ejemplo de creación de una matriz:
-matriz <- matrix(1:12, nrow = 4)
-matriz
+matriz=matrix(1:12, nrow = 4)
+View(matriz)
+dream=matrix(1:24,ncol=6)
 #ejemplo de una matriz usando los argumentos previamente aprendidos. 
 automoviles <- matrix(
   1:12,
@@ -85,7 +92,7 @@ automoviles <- matrix(
   )
 )
 
-automoviles <- matrix(
+automoviles=matrix(
   1:12,
   nrow = 4, 
   byrow = TRUE,
@@ -100,6 +107,7 @@ automoviles <- matrix(
 v1 <- c(1, 2, 3)
 v2 <- c(4, 5, 6)
 m1 <- cbind(v1, v2)
+m2 <- rbind(v1, v2)
 m1
 
 nombres <- c("Pedro","Maria","Juan")
