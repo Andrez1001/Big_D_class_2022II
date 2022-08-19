@@ -1,5 +1,7 @@
 :)
-:D
+:)
+:)
+
 
 pkg <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
